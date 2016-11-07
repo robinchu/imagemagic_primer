@@ -50,8 +50,8 @@ echo '</select>';
 			//$_SESSION['width'] = $width;
 			if ($img) {
 				$filestream = file_get_contents($img);
-				if (!file_exists('../tmp_img') && is_dir('../tmp_img')) {
-					exec('mkdir ../tmp_img');
+				if (!file_exists('tmp_img') && is_dir('tmp_img')) {
+					exec('mkdir tmp_img');
 				}
 				$filename = 'tmp_img/'. substr(md5(time()), -6) . ".jpg";
 				file_put_contents($filename, $filestream);
